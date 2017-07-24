@@ -13,7 +13,7 @@ class bedroom_lights(appapi.my_appapi):
     self.hi_temp=75
     self.lo_temp=68
 
-    self.targets={"light.sam_light_switch":{"triggers":{"light.sam_light_switch":{"type":"light","bit":64,"onValue":"on"},
+    self.targets={"ight.sam_room_light_level":{"triggers":{"light.sam_room_light_level":{"type":"light","bit":64,"onValue":"on"},
                                                         "device_tracker.scox0129_sc0129":{"type":"tracker","bit":2,"onValue":"home"},
                                                         "media_player.sam_directv":{"type":"media","bit":16,"onValue":"playing"},
                                                         "sensor.sam_motion":{"type":"motion","bit":4,"onValue":8},
@@ -23,7 +23,7 @@ class bedroom_lights(appapi.my_appapi):
                                             "dimState":[82,84,86,90,92,94,114,116,118,122,124,126],
                                             "offState":[72,80,88,96,104,112,120]+list(range(0,65)),
                                             "callback":self.light_state_handler},
-                 "light.sam_fan_switch":{"triggers":{"light.sam_fan_switch":{"type":"fan","bit":32,"onValue":"on"},
+                 "fan.sam_room_fan_level":{"triggers":{"fan.sam_room_fan_level":{"type":"fan","bit":32,"onValue":"on"},
                                                      "sensor.sam_temperature":{"type":"temperature","bit":8,"onValue":"on"},
                                                      "input_boolean.samishomeoverride":{"type":"override","bit":1,"onValue":"on"},
                                                      "device_tracker.scox0129_sc0129":{"type":"tracker","bit":2,"onValue":"home"}},
